@@ -123,14 +123,10 @@ export default function EduVibeApp() {
   };
 
   return (
-    /* KONTINER UTAMA: 
-       - Full width di mobile
-       - Max-width 4xl di desktop (agar tidak terlalu lebar)
-       - Auto margin agar rata tengah 
-    */
-    <main className="h-screen w-screen bg-white overflow-hidden flex flex-col">
+
+   <main className="h-screen w-screen bg-white overflow-hidden flex flex-col">
       <div className="w-full h-full relative flex flex-col overflow-y-auto overflow-x-hidden">
-        {/* NAVBAR RESPONSIVE */}
+        <div className="flex-grow flex flex-col">
         <nav
           className={`w-full px-4 md:px-6 py-3 md:py-4 flex items-center justify-between z-[100] fixed top-0 transition-all duration-500 ${
             activeSlide === 1
@@ -1551,6 +1547,31 @@ export default function EduVibeApp() {
           </div>
         </div>
       )}
+      {/* --- FOOTER DI DALAM SCROLLABLE DIV --- */}
+        {/* Footer hanya muncul jika BUKAN slide 1 (Splash Screen) */}
+        {activeSlide !== 1 && (
+          <footer className="w-full py-12 flex flex-col items-center justify-center flex-shrink-0 animate-fade-in">
+            <div className="w-20 h-[1px] bg-slate-100 mb-6" />
+
+            <div className="flex flex-col md:flex-row items-center gap-2 md:gap-4 text-[10px] md:text-xs font-bold tracking-[0.3em] uppercase text-slate-400">
+              <div className="flex items-center gap-2">
+                <span>2026</span>
+                <span className="text-brand-blue font-black">EduVibe</span>
+              </div>
+              <span className="hidden md:block text-slate-300 opacity-50">
+                |
+              </span>
+              <span className="text-slate-500">Learn • Listen • Enjoy</span>
+            </div>
+
+            <div className="flex gap-1.5 mt-4">
+              {[1, 2, 3].map((dot) => (
+                <div key={dot} className="w-1 h-1 rounded-full bg-slate-200" />
+              ))}
+            </div>
+          </footer>
+        )}
+      </div>
     </main>
   );
 }
