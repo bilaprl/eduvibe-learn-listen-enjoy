@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import "./globals.css";
 
 export const metadata: Metadata = {
-  title: "EduVibe - Learn • Listen • Enjoy",
+  title: "EduVibe - Learn • Listen • Enjoy - ena",
   description: "Media Pembelajaran Musik Interaktif",
 };
 
