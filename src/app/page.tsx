@@ -1127,41 +1127,56 @@ export default function EduVibeApp() {
                           </p>
                         </div>
 
-                        {/* AUDIO PLAYER (HASIL REKAMAN) */}
-                        {audioURL && !isRecording && (
-                          <div className="mb-10 w-full max-w-lg animate-bounce-in px-2">
-                            <div className="bg-slate-900 p-4 md:p-6 rounded-[2rem] md:rounded-[3rem] border-4 border-white shadow-2xl flex flex-col gap-4">
-                              <div className="flex items-center gap-4">
-                                <div className="w-12 h-12 bg-brand-yellow rounded-full flex items-center justify-center text-blue-900">
-                                  <span className="material-icons">
-                                    play_arrow
-                                  </span>
-                                </div>
-                                <div className="flex-grow text-left">
-                                  <p className="text-white font-black text-[10px] uppercase tracking-widest">
-                                    Preview Mode
-                                  </p>
-                                  <audio
-                                    src={audioURL}
-                                    controls
-                                    className="w-full h-8 mt-1 filter invert"
-                                  />
-                                </div>
-                                <button
-                                  onClick={() => {
-                                    setAudioURL(null);
-                                    setRecordStatus("Siap Merekam");
-                                  }}
-                                  className="w-10 h-10 bg-white/10 text-white rounded-full flex items-center justify-center hover:bg-red-500 transition-all"
-                                >
-                                  <span className="material-icons text-sm">
-                                    delete
-                                  </span>
-                                </button>
-                              </div>
-                            </div>
-                          </div>
-                        )}
+                        {/* AUDIO PLAYER (HASIL REKAMAN) - PERBAIKAN RESPONSIF MOBILE */}
+{audioURL && !isRecording && (
+  <div className="mb-10 w-full max-w-lg animate-bounce-in px-2">
+    <div className="bg-slate-900 p-5 md:p-6 rounded-[2.5rem] md:rounded-[3rem] border-4 border-white shadow-2xl flex flex-col gap-4">
+      <div className="flex flex-col md:flex-row items-center gap-4">
+        {/* Play Icon Decor */}
+        <div className="hidden md:flex w-12 h-12 bg-brand-yellow rounded-full items-center justify-center text-blue-900 flex-shrink-0">
+          <span className="material-icons">play_arrow</span>
+        </div>
+
+        <div className="flex-grow w-full text-left">
+          <div className="flex justify-between items-center mb-2 px-1">
+            <p className="text-white font-black text-[10px] uppercase tracking-widest flex items-center gap-2">
+              <span className="w-1.5 h-1.5 rounded-full bg-brand-yellow animate-pulse"></span>
+              Preview Rekaman
+            </p>
+            {/* Tombol Hapus khusus Mobile agar mudah dijangkau */}
+            <button
+              onClick={() => {
+                setAudioURL(null);
+                setRecordStatus("Siap Merekam");
+              }}
+              className="md:hidden text-red-400 text-xs font-bold flex items-center gap-1 uppercase tracking-tighter"
+            >
+              <span className="material-icons text-sm">delete</span> Hapus
+            </button>
+          </div>
+          
+          {/* Audio Tag: Disesuaikan agar muncul di Mobile */}
+          <audio
+            src={audioURL}
+            controls
+            className="w-full h-10 md:h-8 filter brightness-200 contrast-150 md:invert"
+          />
+        </div>
+
+        {/* Tombol Hapus Desktop */}
+        <button
+          onClick={() => {
+            setAudioURL(null);
+            setRecordStatus("Siap Merekam");
+          }}
+          className="hidden md:flex w-12 h-12 bg-white/10 text-white rounded-full items-center justify-center hover:bg-red-500 transition-all flex-shrink-0"
+        >
+          <span className="material-icons text-xl">delete</span>
+        </button>
+      </div>
+    </div>
+  </div>
+)}
 
                         {/* DYNAMIC VISUALIZER: Perbaikan untuk menghindari styling bugs */}
                         {!audioURL && (
