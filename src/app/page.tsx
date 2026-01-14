@@ -2308,135 +2308,135 @@ export default function EduVibeApp() {
           )}
 
         {/* 6. Slide Penilaian - Final Feedback */}
-        {activeSlide === 6 && (
-          <section className="flex-grow min-h-screen flex flex-col animate-fade-in bg-slate-50 overflow-x-hidden relative">
-            {/* --- HEADER SECTION --- */}
-            <div className="relative w-full">
-              {/* Penyesuaian padding mobile */}
-              <div className="bg-brand-blue pt-20 pb-28 md:pt-32 md:pb-48 px-6 md:px-12 rounded-b-[2.5rem] md:rounded-b-[8rem] shadow-2xl relative overflow-hidden">
-                <div className="absolute top-0 right-0 w-72 h-72 md:w-96 md:h-96 bg-white/5 rounded-full blur-[80px] md:blur-[100px] -mr-10 -mt-10" />
-                <div className="max-w-7xl mx-auto relative z-10">
-                  <div className="flex flex-col items-center text-center">
-                    <div className="inline-flex items-center gap-2 md:gap-3 bg-brand-yellow text-blue-900 px-5 py-2 rounded-full font-black text-[9px] md:text-xs uppercase tracking-[0.2em] mb-4 md:mb-6 shadow-lg">
-                      <span className="material-icons text-xs md:text-sm">
-                        auto_awesome
-                      </span>
-                      Satu Langkah Terakhir
-                    </div>
-                    <h2 className="text-3xl md:text-7xl font-black text-white mb-4 tracking-tighter leading-tight">
-                      Beri Kami <span className="text-brand-yellow">Nilai</span>
-                    </h2>
-                    <p className="text-white/60 font-medium max-w-xl text-xs md:text-base px-4">
-                      Terima kasih telah menjelajahi EduVibe. Pendapatmu sangat
-                      berarti untuk masa depan aplikasi ini.
-                    </p>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            {/* --- MAIN CONTENT AREA --- */}
-            <div className="w-full px-4 md:px-12 lg:px-24 -mt-12 md:-mt-24 relative z-20 pb-16 flex-grow">
-              <div className="max-w-2xl mx-auto">
-                {/* Penyesuaian padding kartu untuk mobile (p-6) */}
-                <div className="animate-slide-up bg-white rounded-[2.5rem] md:rounded-[4rem] shadow-2xl p-6 md:p-20 relative overflow-hidden border border-white text-center">
-                  <div className="absolute top-0 left-6 md:left-20 bottom-0 w-[1.5px] bg-slate-100" />
-
-                  <div className="relative z-10 flex flex-col items-center">
-                    <div className="w-16 h-16 md:w-24 md:h-24 bg-brand-yellow/10 text-brand-yellow rounded-full flex items-center justify-center mb-6 md:mb-8 shadow-inner">
-                      <span className="material-icons text-3xl md:text-5xl">
-                        grade
-                      </span>
-                    </div>
-
-                    <h3 className="text-xl md:text-3xl font-black text-brand-blue tracking-tighter uppercase mb-2">
-                      Rating EduVibe
-                    </h3>
-                    <p className="text-slate-400 font-bold mb-8 md:mb-10 text-[10px] md:text-sm tracking-wide">
-                      SENTUH BINTANG UNTUK MEMBERI RATING
-                    </p>
-
-                    {/* INTERAKTIF: BINTANG - Ukuran responsif (text-4xl vs text-7xl) */}
-                    <div className="flex gap-1 md:gap-4 mb-8 md:mb-12">
-                      {[1, 2, 3, 4, 5].map((star) => (
-                        <button
-                          key={star}
-                          onMouseEnter={() => setHoverRating(star)}
-                          onMouseLeave={() => setHoverRating(0)}
-                          onClick={() => setRating(star)}
-                          className="transition-all duration-300 transform active:scale-90"
-                        >
-                          <span
-                            className={`material-icons text-4xl md:text-7xl ${
-                              star <= (hoverRating || rating)
-                                ? "text-brand-yellow drop-shadow-md"
-                                : "text-slate-200"
-                            }`}
-                          >
-                            {star <= (hoverRating || rating)
-                              ? "star"
-                              : "star_border"}
-                          </span>
-                        </button>
-                      ))}
-                    </div>
-
-                    {/* Dinamis Feedback Message */}
-                    {rating > 0 && (
-                      <div className="animate-fade-in bg-slate-50 px-6 py-3 md:px-8 md:py-4 rounded-xl md:rounded-2xl border border-slate-100 mb-8 w-full max-w-xs md:max-w-none">
-                        <p className="text-brand-blue font-black uppercase text-[10px] md:text-xs tracking-widest leading-relaxed">
-                          {rating === 5
-                            ? "Sempurna! Kami sangat senang! 😍"
-                            : rating >= 3
-                            ? "Terima kasih atas dukungannya! 😊"
-                            : "Kami akan berusaha lebih baik lagi! 🫡"}
-                        </p>
+          {activeSlide === 7 && (
+            <section className="flex-grow min-h-screen flex flex-col animate-fade-in bg-slate-50 overflow-x-hidden relative">
+              {/* --- HEADER SECTION --- */}
+              <div className="relative w-full">
+                {/* Penyesuaian padding mobile */}
+                <div className="bg-brand-blue pt-20 pb-28 md:pt-32 md:pb-48 px-6 md:px-12 rounded-b-[2.5rem] md:rounded-b-[8rem] shadow-2xl relative overflow-hidden">
+                  <div className="absolute top-0 right-0 w-72 h-72 md:w-96 md:h-96 bg-white/5 rounded-full blur-[80px] md:blur-[100px] -mr-10 -mt-10" />
+                  <div className="max-w-7xl mx-auto relative z-10">
+                    <div className="flex flex-col items-center text-center">
+                      <div className="inline-flex items-center gap-2 md:gap-3 bg-brand-yellow text-blue-900 px-5 py-2 rounded-full font-black text-[9px] md:text-xs uppercase tracking-[0.2em] mb-4 md:mb-6 shadow-lg">
+                        <span className="material-icons text-xs md:text-sm">
+                          auto_awesome
+                        </span>
+                        Satu Langkah Terakhir
                       </div>
-                    )}
-
-                    <textarea
-                      className="w-full bg-slate-50 border-2 border-slate-100 p-4 md:p-6 rounded-[1.5rem] md:rounded-[2rem] focus:border-brand-blue outline-none mb-6 md:mb-8 font-bold text-slate-600 text-sm md:text-base placeholder:opacity-30"
-                      rows={3}
-                      placeholder="Tambahkan pesan atau saran lainnya..."
-                    ></textarea>
-
-                    <button
-                      onClick={() => alert("Terima kasih atas penilaiannya!")}
-                      className={`w-full py-4 md:py-5 rounded-full font-black text-base md:text-xl shadow-xl transition-all active:scale-95 ${
-                        rating > 0
-                          ? "bg-brand-blue text-white hover:bg-brand-yellow hover:text-blue-900"
-                          : "bg-slate-100 text-slate-300 cursor-not-allowed"
-                      }`}
-                      disabled={rating === 0}
-                    >
-                      KIRIM PENILAIAN
-                    </button>
+                      <h2 className="text-3xl md:text-7xl font-black text-white mb-4 tracking-tighter leading-tight">
+                        Beri Kami{" "}
+                        <span className="text-brand-yellow">Nilai</span>
+                      </h2>
+                      <p className="text-white/60 font-medium max-w-xl text-xs md:text-base px-4">
+                        Terima kasih telah menjelajahi EduVibe. Pendapatmu
+                        sangat berarti untuk masa depan aplikasi ini.
+                      </p>
+                    </div>
                   </div>
                 </div>
               </div>
-            </div>
 
-            {/* --- FOOTER NAVIGATION --- */}
-            <div className="p-6 md:p-8 md:px-24 bg-white border-t border-gray-100 flex flex-col md:flex-row justify-between items-center gap-4 mt-auto">
-              <button
-                onClick={() => setActiveSlide(5)}
-                className="text-gray-400 hover:text-brand-blue transition-all flex items-center gap-2 font-bold text-sm md:text-lg order-2 md:order-1"
-              >
-                <span className="material-icons">arrow_back</span> Kembali ke
-                Podcast
-              </button>
+              {/* --- MAIN CONTENT AREA --- */}
+              <div className="w-full px-4 md:px-12 lg:px-24 -mt-12 md:-mt-24 relative z-20 pb-16 flex-grow">
+                <div className="max-w-2xl mx-auto">
+                  {/* Penyesuaian padding kartu untuk mobile (p-6) */}
+                  <div className="animate-slide-up bg-white rounded-[2.5rem] md:rounded-[4rem] shadow-2xl p-6 md:p-20 relative overflow-hidden border border-white text-center">
+                    <div className="absolute top-0 left-6 md:left-20 bottom-0 w-[1.5px] bg-slate-100" />
 
-              <div className="order-1 md:order-2">
-                <div className="flex items-center gap-3 bg-slate-900 text-white py-1.5 px-5 md:py-2 md:px-6 rounded-full">
-                  <span className="text-[10px] md:text-xs font-black uppercase tracking-widest text-brand-yellow">
-                    Finish
-                  </span>
-                  <span className="w-2 h-2 bg-green-500 rounded-full animate-pulse"></span>
+                    <div className="relative z-10 flex flex-col items-center">
+                      <div className="w-16 h-16 md:w-24 md:h-24 bg-brand-yellow/10 text-brand-yellow rounded-full flex items-center justify-center mb-6 md:mb-8 shadow-inner">
+                        <span className="material-icons text-3xl md:text-5xl">
+                          grade
+                        </span>
+                      </div>
+
+                      <h3 className="text-xl md:text-3xl font-black text-brand-blue tracking-tighter uppercase mb-2">
+                        Rating EduVibe
+                      </h3>
+                      <p className="text-slate-400 font-bold mb-8 md:mb-10 text-[10px] md:text-sm tracking-wide">
+                        SENTUH BINTANG UNTUK MEMBERI RATING
+                      </p>
+
+                      {/* INTERAKTIF: BINTANG - Ukuran responsif (text-4xl vs text-7xl) */}
+                      <div className="flex gap-1 md:gap-4 mb-8 md:mb-12">
+                        {[1, 2, 3, 4, 5].map((star) => (
+                          <button
+                            key={star}
+                            onMouseEnter={() => setHoverRating(star)}
+                            onMouseLeave={() => setHoverRating(0)}
+                            onClick={() => setRating(star)}
+                            className="transition-all duration-300 transform active:scale-90"
+                          >
+                            <span
+                              className={`material-icons text-4xl md:text-7xl ${
+                                star <= (hoverRating || rating)
+                                  ? "text-brand-yellow drop-shadow-md"
+                                  : "text-slate-200"
+                              }`}
+                            >
+                              {star <= (hoverRating || rating)
+                                ? "star"
+                                : "star_border"}
+                            </span>
+                          </button>
+                        ))}
+                      </div>
+
+                      {/* Dinamis Feedback Message */}
+                      {rating > 0 && (
+                        <div className="animate-fade-in bg-slate-50 px-6 py-3 md:px-8 md:py-4 rounded-xl md:rounded-2xl border border-slate-100 mb-8 w-full max-w-xs md:max-w-none">
+                          <p className="text-brand-blue font-black uppercase text-[10px] md:text-xs tracking-widest leading-relaxed">
+                            {rating === 5
+                              ? "Sempurna! Kami sangat senang! 😍"
+                              : rating >= 3
+                              ? "Terima kasih atas dukungannya! 😊"
+                              : "Kami akan berusaha lebih baik lagi! 🫡"}
+                          </p>
+                        </div>
+                      )}
+
+                      <textarea
+                        className="w-full bg-slate-50 border-2 border-slate-100 p-4 md:p-6 rounded-[1.5rem] md:rounded-[2rem] focus:border-brand-blue outline-none mb-6 md:mb-8 font-bold text-slate-600 text-sm md:text-base placeholder:opacity-30"
+                        rows={3}
+                        placeholder="Tambahkan pesan atau saran lainnya..."
+                      ></textarea>
+
+                      <button
+                        onClick={() => alert("Terima kasih atas penilaiannya!")}
+                        className={`w-full py-4 md:py-5 rounded-full font-black text-base md:text-xl shadow-xl transition-all active:scale-95 ${
+                          rating > 0
+                            ? "bg-brand-blue text-white hover:bg-brand-yellow hover:text-blue-900"
+                            : "bg-slate-100 text-slate-300 cursor-not-allowed"
+                        }`}
+                        disabled={rating === 0}
+                      >
+                        KIRIM PENILAIAN
+                      </button>
+                    </div>
+                  </div>
                 </div>
               </div>
-            </div>
-          </section>
-        )}
+
+              {/* --- FOOTER NAVIGATION --- */}
+              <div className="p-6 md:p-8 md:px-24 bg-white border-t border-gray-100 flex flex-col md:flex-row justify-between items-center gap-4 mt-auto">
+                <button
+                  onClick={() => setActiveSlide(6)}
+                  className="text-gray-400 hover:text-brand-blue transition-all flex items-center gap-2 font-black text-sm uppercase tracking-widest"
+                >
+                  <span className="material-icons">west</span> Kembali ke SMA
+                </button>
+
+                <div className="order-1 md:order-2">
+                  <div className="flex items-center gap-3 bg-slate-900 text-white py-1.5 px-5 md:py-2 md:px-6 rounded-full">
+                    <span className="text-[10px] md:text-xs font-black uppercase tracking-widest text-brand-yellow">
+                      Finish
+                    </span>
+                    <span className="w-2 h-2 bg-green-500 rounded-full animate-pulse"></span>
+                  </div>
+                </div>
+              </div>
+            </section>
+          )}
       </div>
 
       {/* MODAL TENTANG APLIKASI */}
